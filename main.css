@@ -12,6 +12,14 @@ li {
 .image {
     height: 45vmin;
 }
+.image:hover
+{
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari prior 9.0 */
+    transform: rotate(20deg); /* Standard syntax */
+  }
+
+
 
 .intro__about {
     width: 25rem;
@@ -56,7 +64,6 @@ li {
     float: right;
     font-size: 28px;
     font-weight: bold;  
-    width: 20px;
 }
 
 .modal-close:hover, .modal-close:focus {
@@ -72,3 +79,33 @@ li {
 .teapot-rotate {
     transform: rotate(20deg);
 }
+#container{
+    position: absolute;
+    width: 99vw;
+    height: 100%;
+    background-color: rgba(136, 136, 136, 0.37);
+    display: flex;
+    margin: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+#message{
+    
+    width: 99vw;
+    height: 5vw;
+    background: white;
+    text-align: center;
+    position: relative;
+    margin: 0;
+}
+
+#closeBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 5px;
+    cursor: pointer;
+}
+

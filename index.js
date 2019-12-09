@@ -1,36 +1,23 @@
-$(".m-2").on('click', event=> {
-      $("[Equal='senden']").css("display", "block");
-})// Work on your tasks here
+// Work on your tasks here
 
-$(".modal-close").on('click', event =>{
-      $("[Equal='senden']").css("display", "none");
+$('#submit').on('click',event=>{
+    $('#container').css('display','flex')
+    
+
 })
-$(".teapot").on('click',event =>{
-      $(".teapot").toggleClass("teapot-rotate");
-})
-var containerDOM = document.querySelector(".modal")
-var containerJQuery = $(containerDOM)
-$("[Equal='senden']").on("click",event=>{
-      console.log(event)
-      if(event.target === $("[Equal='senden']")[0]) $("[Equal='senden']").hide()
-})
-$("#c1-1").on("mouseover",event=>{
-      $("#c1").html("Good Morning Tea contains no caffeine");
-})
-$("#c1-1").on("mouseout",event=>{
-      $("#c1").html("TWININGS");
+var containerDOM = document.querySelector('#container')
+var containerJQuery = $(containerDOM )
+$('#container').on('click',event=> {
+    
+ console.log(event)
+ if(event.traget === $('#container')[0])$('#container').hide()
 })
 
-$("#c2-1").on("mouseover",event=>{
-      $("#c2").html("TAOUS Tea contains caffeine");
+$('#closeBtn').on('click',event=>{
+    $('#container').hide()
 })
-$("#c2-1").on("mouseout",event=>{
-      $("#c2").html("TAOUS");
-})
-
-$("#c3-1").on("mouseover",event=>{
-      $("#c3").html("Great tea for a cold night");
-})
-$("#c3-1").on("mouseout",event=>{
-      $("#c3").html("LIPTON");
-})
+$('.main p').hover(function(){
+    $(this).text("Rich in flavours");
+},function(){
+    $(this).text("Great tea for a cold night");
+});
